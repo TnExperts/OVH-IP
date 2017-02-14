@@ -16,7 +16,8 @@ $organisationID = 'RIPE_34567';               // An added Organisation within yo
 $search  = array('"', '{', '}', ':'); 
 $replace = array('', '"', '"', '');
 
-$curContent = '<table border=0 width=100%><tr><td width=100% align=center>SOYOUSTART IP Subnet availability of all sizes and all countries<br>&nbsp;<br><table border=1>';
+$curContent = "<html><head><meta http-equiv=refresh content=300></head><body>\n";
+$curContent = $curContent.'<table border=0 width=100%><tr><td width=100% align=center>SOYOUSTART IP Subnet availability of all sizes and all countries<br>&nbsp;<br><table border=1>';
 
 $conn = curl_init(); 
 $request = curl_init(); 
@@ -62,7 +63,7 @@ foreach($regions AS $region) {
 curl_close($request);  
 curl_close($conn); 
 
-$curContent = $curContent.'</table></td></tr></table>';
+$curContent = $curContent.'</table><br>last Update '.date("Y-m-d H:i:s").'</td></tr></table></body></html>';
 echo $curContent;
 
 ?>
