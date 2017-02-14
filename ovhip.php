@@ -49,9 +49,13 @@ foreach($regions AS $region) {
 		
 		$pos = strpos($output2, 'upto');
 		if ($pos === false) {
-			$curContent = $curContent.'<td align=center valign=middle bgcolor=#FFB1B1 style=background-color:#FFB1B1 width=50px height=50px><a title='.str_replace($search,$replace,$output2).'>'.$blocksize."</td>\n";
+			if ((strpos($output2, '500 ')) === false) {
+				$curContent = $curContent.'<td align=center valign=middle bgcolor=#FFB1B1 style=background-color:#FFB1B1 width=50px height=50px><a title='.str_replace($search,$replace,$output2).'>'.$blocksize."</a></td>\n";
+			} else {
+				$curContent = $curContent."<td align=center valign=middle bgcolor=#FFB1B1 style=background-color:#FFB1B1 width=50px height=50px><a title=REQUEST ERROR>-</a></td>\n";	
+			}
 		} else {
-			$curContent = $curContent.'<td align=center valign=middle bgcolor=#BDF6BE style=background-color:#BDF6BE width=50px height=50px><a title='.str_replace($search,$replace,$output2).'>'.$blocksize."</td>\n";
+			$curContent = $curContent.'<td align=center valign=middle bgcolor=#BDF6BE style=background-color:#BDF6BE width=50px height=50px><a title='.str_replace($search,$replace,$output2).'>'.$blocksize."</a></td>\n";
 		}
 
 	}	
