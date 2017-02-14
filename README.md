@@ -16,4 +16,6 @@ Sometimes the OVH API gets in trouble which results in errors within the table o
 
 As you can see both files are nearly identical for now, as is the API for both. ;-) 
 
+For outputting a snapshotted Version to your Webserver use crontab or a little Bash-Script like the example ovhip.bash 
+
 
