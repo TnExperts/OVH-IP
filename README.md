@@ -6,11 +6,9 @@ The PHP-OVH Repo ( https://github.com/ovh/php-ovh ) throws too much errors, we d
 
 So we wrote a little Script without any dependencies which does the job giving us a table with available IP Space for all regions and all sizes. 
 
-Examples: 
+Example: 
 
-OVH:  https://servergurus.de/ovh/ovhip.php
-
-SYS:  https://servergurus.de/ovh/sysip.php
+OVH:  https://servergurus.de/ovh/
 
 Please keep in mind that this was written quick and dirty for the moment! 
 
